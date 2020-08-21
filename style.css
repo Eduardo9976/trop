@@ -1,0 +1,232 @@
+/* geral */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: monospace;
+    background: #eee;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border: 2px solid rgba(0, 0, 0, 0.7);
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.7), 5px 5px 3px rgba(0, 0, 0, 0.7);
+    border-radius: 4px;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+section {
+    margin-top: 8% !important;
+}
+p {
+    font-size: 1.5em;
+    line-height: 1.66667em;
+    margin-bottom: 10px;
+}
+h1 {
+    font-size: 2.2em;
+    text-transform: uppercase;
+    margin-bottom: 10%;
+}
+h1::after {
+    content: " ";
+    width: 17%;
+    height: 3px;
+    display: block;
+    background: rgba(0, 0, 0, 0.9);
+}
+h3 {
+    font-size: 1.5em;
+    line-height: 1.66667em;
+}
+.container {
+    max-width: 1220px;
+    margin: 0 auto;
+    padding: 0 10px;
+    /*background: #fff; */
+}
+.flexR {
+    display: flex;
+    flex-wrap: wrap;
+}
+.space {
+    margin: 10px auto;
+    display: block;
+}
+
+/*header*/
+
+header {
+    background-image: url("./imgs/barberH.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    background-size: cover;
+}
+.bgHeader{
+    height: 200px;
+    justify-content: flex-end;
+    align-items: center;
+    
+}
+.logo {
+    width: 250px;
+    cursor: pointer;
+    border: 2px solid rgba(0, 0, 0, 0.7);
+    border-radius: 4px;
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.7), 5px 5px 3px rgba(0, 0, 0, 0.7);
+}
+.logo:hover {
+    -webkit-transform: rotate(-15deg);
+    transform: rotate(-15deg);
+}
+nav {
+    justify-content: space-between;
+    align-items: center;
+}
+nav ul {
+    justify-content: flex-end;
+}
+nav li {
+    margin-top: 10px;
+}
+nav li + li {
+    margin-left: 10px;
+}
+nav a {
+    display: block;
+    color: #FFF;
+    padding: 10px;
+    font-family: monospace;
+    font-size: 1.3em;
+    border: 2px solid rgba(0, 0, 0, 0.7);
+    border-radius: 4px;
+}
+nav a:hover{
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1)
+}
+
+/* conteudo */
+
+.content {
+    margin-top: 10px;
+    justify-content: space-between;
+}
+.mainText {
+    width: 60%;
+}
+@media (max-width: 906px) {
+    /* body {
+        background: red;
+    } */
+    p {
+        font-size: 1.125em;
+    }
+    .mainText {
+        width: 50%;
+    }
+}
+@media (max-width: 728px) {
+    /* body {
+        background: blue;
+    } */
+    p {
+        font-size: 1.5em;
+    }
+    .content {
+        justify-content: center;
+    }
+    .mainText {
+        width: 100%;
+    }
+    .mainImg {
+        display: flex;
+        justify-content: center;
+        margin-top: 10%;
+    }
+}
+/* service */
+.service {
+    display: grid;
+}
+.serviceItem {
+    display: flex;
+    justify-content: space-between;
+}
+.serviceItem p {
+    font-size: 1.8em;
+    font-style: italic;
+}
+.serviceItem span {
+    font-size: 2em;
+    font-style: italic;
+    font-weight: bold;
+}
+@media (max-width: 728px) {
+    .serviceItem span {
+        font-size: 1.7em;
+    }
+    .pictureServices {
+        order: 2;
+    }
+}    
+.pictureServices {
+    justify-content: space-between;
+}
+.pictureServices img:last-child{
+    display: none;
+}
+.pictureServices img {
+    margin-bottom: 10%;
+}
+@media (max-width: 728px) { 
+    .pictureServices img:last-child{
+        display: block;
+    }
+}
+@media (max-width: 643px) {
+    .pictureServices {
+        justify-content: center;
+    }
+}
+
+
+/* Valores */
+.values {
+    justify-content: space-between;
+}
+.valuesInfos {
+    width: 60%;
+}
+@media (max-width: 1200px) {
+    .valuesInfos {
+        width: 50% !important;
+    }
+}
+@media (max-width: 940px) {
+    .valuesInfos {
+        width: 40% !important;
+    }
+}
+@media (max-width: 790px) {
+    .values {
+        justify-content: center;
+    }
+    .valuesInfos {
+        width: 100% !important;
+        margin-top: 10%;
+    }
+}
+@media (max-width: 728px) {
+    .pictureValues{
+        order: 2 !important;
+    }
+}
